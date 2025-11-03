@@ -1,0 +1,413 @@
+{
+    "meta": {
+        "name": "ErikTronic Patchbay",
+        "device": "Samson S-Patch Plus",
+        "rows": {
+            "A": "top (outputs)",
+            "B": "bottom (inputs)"
+        },
+        "normalling_default": "HN",
+        "channels_total": 24,
+        "notes": "HN = half-normal. A=out, B=in. Patching into B breaks the normal; patching from A mults."
+    },
+    "legend": {
+        "normalling": {
+            "HN": "Half-normal (default)",
+            "TH": "Through (no normal)",
+            "FN": "Full-normal"
+        },
+        "groups": {
+            "REC": "Recording chain",
+            "SYN": "Synths & Samplers",
+            "DRM": "Drum modules",
+            "VIN": "Vinyl/Phono",
+            "FX": "Pedals/Outboard FX",
+            "MON": "Monitoring",
+            "AUX": "Aux / spare"
+        },
+        "colors": {
+            "REC": "amber",
+            "SYN": "teal",
+            "DRM": "purple",
+            "VIN": "rose",
+            "FX": "blue",
+            "MON": "green",
+            "AUX": "gray"
+        }
+    },
+    "ui": {
+        "defaultView": "grid",
+        "hoverDelayMs": 120,
+        "showColors": true,
+        "labelCase": "upper",
+        "channelNumbering": "1-24"
+    },
+    "channels": [
+        {
+            "ch": 1,
+            "group": "REC",
+            "normalling": "HN",
+            "a_short": "VTB OUT",
+            "a_full": "Studio Projects VTB1 Output",
+            "b_short": "3630 IN-L",
+            "b_full": "Alesis 3630 Input Left",
+            "tooltips": {
+                "a": "Preamp out by default → 3630 L.",
+                "b": "3630 L receives VTB1 unless you patch a different source."
+            }
+        },
+        {
+            "ch": 2,
+            "group": "REC",
+            "normalling": "HN",
+            "a_short": "VTB OUT-ALT",
+            "a_full": "VTB1 Output (alternate / link)",
+            "b_short": "3630 IN-R",
+            "b_full": "Alesis 3630 Input Right",
+            "tooltips": {
+                "a": "Use for stereo sources or linked comp.",
+                "b": "3630 R receives VTB1 alt unless patched."
+            }
+        },
+        {
+            "ch": 3,
+            "group": "REC",
+            "normalling": "HN",
+            "a_short": "3630 OUT-L",
+            "a_full": "Alesis 3630 Output Left",
+            "b_short": "ID44 IN-1",
+            "b_full": "Audient iD44 Input 1",
+            "tooltips": {
+                "a": "Post-compressor L.",
+                "b": "Default record path: 3630 L → iD44 IN1."
+            }
+        },
+        {
+            "ch": 4,
+            "group": "REC",
+            "normalling": "HN",
+            "a_short": "3630 OUT-R",
+            "a_full": "Alesis 3630 Output Right",
+            "b_short": "ID44 IN-2",
+            "b_full": "Audient iD44 Input 2",
+            "tooltips": {
+                "a": "Post-compressor R.",
+                "b": "Default record path: 3630 R → iD44 IN2."
+            }
+        },
+        {
+            "ch": 5,
+            "group": "SYN",
+            "normalling": "TH",
+            "a_short": "MPC OUT-L",
+            "a_full": "MPC One Main Output Left",
+            "b_short": "ID44 IN-3",
+            "b_full": "Audient iD44 Input 3",
+            "tooltips": {
+                "a": "MPC L available for record or FX.",
+                "b": "Patch MPC L→IN3 or any other source."
+            }
+        },
+        {
+            "ch": 6,
+            "group": "SYN",
+            "normalling": "TH",
+            "a_short": "MPC OUT-R",
+            "a_full": "MPC One Main Output Right",
+            "b_short": "ID44 IN-4",
+            "b_full": "Audient iD44 Input 4",
+            "tooltips": {
+                "a": "MPC R available for record or FX.",
+                "b": "Patch MPC R→IN4 or as needed."
+            }
+        },
+        {
+            "ch": 7,
+            "group": "SYN",
+            "normalling": "TH",
+            "a_short": "MS2K OUT-L",
+            "a_full": "Korg MS2000R Output Left",
+            "b_short": "ID44 IN-3",
+            "b_full": "Audient iD44 Input 3 (alt)",
+            "tooltips": {
+                "a": "Poly/VA synth L.",
+                "b": "Choose MS2000R or MPC into IN3 per patch."
+            }
+        },
+        {
+            "ch": 8,
+            "group": "SYN",
+            "normalling": "TH",
+            "a_short": "MS2K OUT-R",
+            "a_full": "Korg MS2000R Output Right",
+            "b_short": "ID44 IN-4",
+            "b_full": "Audient iD44 Input 4 (alt)",
+            "tooltips": {
+                "a": "Poly/VA synth R.",
+                "b": "Choose MS2000R or MPC into IN4 per patch."
+            }
+        },
+        {
+            "ch": 9,
+            "group": "SYN",
+            "normalling": "TH",
+            "a_short": "ID44 OUT-3",
+            "a_full": "Audient iD44 Output 3",
+            "b_short": "MS2K IN-L",
+            "b_full": "Korg MS2000R Audio Input Left",
+            "tooltips": {
+                "a": "DAW send to outboard.",
+                "b": "Feed MS2000R vocoder/ext-in from DAW."
+            }
+        },
+        {
+            "ch": 10,
+            "group": "SYN",
+            "normalling": "TH",
+            "a_short": "ID44 OUT-4",
+            "a_full": "Audient iD44 Output 4",
+            "b_short": "MS2K IN-R",
+            "b_full": "Korg MS2000R Audio Input Right",
+            "tooltips": {
+                "a": "DAW send to outboard.",
+                "b": "Stereo feed to MS2000R input."
+            }
+        },
+        {
+            "ch": 11,
+            "group": "DRM",
+            "normalling": "TH",
+            "a_short": "MBASE OUT",
+            "a_full": "Jomox MBase 11 Output (Mono)",
+            "b_short": "ID44 IN-3",
+            "b_full": "Audient iD44 Input 3 (alt)",
+            "tooltips": {
+                "a": "Analog kick module.",
+                "b": "Record to IN3 when needed."
+            }
+        },
+        {
+            "ch": 12,
+            "group": "DRM",
+            "normalling": "TH",
+            "a_short": "MBRANE OUT",
+            "a_full": "Jomox MBrane 1_1 Output (Mono)",
+            "b_short": "ID44 IN-4",
+            "b_full": "Audient iD44 Input 4 (alt)",
+            "tooltips": {
+                "a": "Analog membrane percussion.",
+                "b": "Record to IN4 when needed."
+            }
+        },
+        {
+            "ch": 13,
+            "group": "VIN",
+            "normalling": "TH",
+            "a_short": "PHONO OUT-L",
+            "a_full": "Stanton via Phono Preamp Output Left",
+            "b_short": "VTB IN",
+            "b_full": "VTB1 Input",
+            "tooltips": {
+                "a": "Line-level from phono pre (L).",
+                "b": "Drive through VTB or patch to ID44."
+            }
+        },
+        {
+            "ch": 14,
+            "group": "VIN",
+            "normalling": "TH",
+            "a_short": "PHONO OUT-R",
+            "a_full": "Stanton via Phono Preamp Output Right",
+            "b_short": "VTB IN-ALT",
+            "b_full": "VTB1 Input (alt / re-patch)",
+            "tooltips": {
+                "a": "Line-level from phono pre (R).",
+                "b": "Use if treating R independently."
+            }
+        },
+        {
+            "ch": 15,
+            "group": "FX",
+            "normalling": "TH",
+            "a_short": "EBS IN",
+            "a_full": "EBS MultiDrive Input (Mono)",
+            "b_short": "AUX IN",
+            "b_full": "Free Patch Input",
+            "tooltips": {
+                "a": "Reamp from ID44 OUT3/4 or instrument.",
+                "b": "Use to chain into VTB1 or 3630."
+            }
+        },
+        {
+            "ch": 16,
+            "group": "FX",
+            "normalling": "TH",
+            "a_short": "EBS OUT",
+            "a_full": "EBS MultiDrive Output (Mono)",
+            "b_short": "VTB / ID44",
+            "b_full": "Patch to VTB1 In or iD44 In",
+            "tooltips": {
+                "a": "Distorted/colored signal.",
+                "b": "Record or compress after drive."
+            }
+        },
+        {
+            "ch": 17,
+            "group": "MON",
+            "normalling": "HN",
+            "a_short": "ID44 OUT-1",
+            "a_full": "Audient iD44 Output 1 (Monitor L)",
+            "b_short": "MON L",
+            "b_full": "Monitor Left Input",
+            "tooltips": {
+                "a": "Main left to monitors by default.",
+                "b": "Break normal only if you must re-route."
+            }
+        },
+        {
+            "ch": 18,
+            "group": "MON",
+            "normalling": "HN",
+            "a_short": "ID44 OUT-2",
+            "a_full": "Audient iD44 Output 2 (Monitor R)",
+            "b_short": "MON R",
+            "b_full": "Monitor Right Input",
+            "tooltips": {
+                "a": "Main right to monitors by default.",
+                "b": "Keep normal for daily use."
+            }
+        },
+        {
+            "ch": 19,
+            "group": "AUX",
+            "normalling": "TH",
+            "a_short": "AUX A",
+            "a_full": "Free Output A",
+            "b_short": "AUX B",
+            "b_full": "Free Input B",
+            "tooltips": {
+                "a": "Spare jack for temporary routing.",
+                "b": "Spare jack for temporary routing."
+            }
+        },
+        {
+            "ch": 20,
+            "group": "AUX",
+            "normalling": "TH",
+            "a_short": "AUX C",
+            "a_full": "Free Output C",
+            "b_short": "AUX D",
+            "b_full": "Free Input D",
+            "tooltips": {
+                "a": "Spare jack for temporary routing.",
+                "b": "Spare jack for temporary routing."
+            }
+        },
+        {
+            "ch": 21,
+            "group": "AUX",
+            "normalling": "TH",
+            "a_short": "SEND",
+            "a_full": "Free DAW/Outboard Send",
+            "b_short": "RET-L",
+            "b_full": "Free Return Left",
+            "tooltips": {
+                "a": "Use as flexible send (e.g., ID44 OUT3).",
+                "b": "Return L from outboard."
+            }
+        },
+        {
+            "ch": 22,
+            "group": "AUX",
+            "normalling": "TH",
+            "a_short": "SEND",
+            "a_full": "Free DAW/Outboard Send",
+            "b_short": "RET-R",
+            "b_full": "Free Return Right",
+            "tooltips": {
+                "a": "Use as flexible send (e.g., ID44 OUT4).",
+                "b": "Return R from outboard."
+            }
+        },
+        {
+            "ch": 23,
+            "group": "AUX",
+            "normalling": "TH",
+            "a_short": "CUE OUT",
+            "a_full": "Spare Cue / Headphone Send",
+            "b_short": "CUE IN",
+            "b_full": "Spare Cue Return",
+            "tooltips": {
+                "a": "Temporary cue feed to performer or pedal.",
+                "b": "Bring cue back for monitoring/record."
+            }
+        },
+        {
+            "ch": 24,
+            "group": "AUX",
+            "normalling": "TH",
+            "a_short": "ISO A",
+            "a_full": "Isolated Test/Diag A",
+            "b_short": "ISO B",
+            "b_full": "Isolated Test/Diag B",
+            "tooltips": {
+                "a": "Keep free for testing or new gear.",
+                "b": "Keep free for testing or new gear."
+            }
+        }
+    ],
+    "front_panel_labels": {
+        "stripA": [
+            "VTB OUT",
+            "VTB OUT-ALT",
+            "3630 OUT-L",
+            "3630 OUT-R",
+            "MPC OUT-L",
+            "MPC OUT-R",
+            "MS2K OUT-L",
+            "MS2K OUT-R",
+            "ID44 OUT-3",
+            "ID44 OUT-4",
+            "MBASE OUT",
+            "MBRANE OUT",
+            "PHONO OUT-L",
+            "PHONO OUT-R",
+            "EBS IN",
+            "EBS OUT",
+            "ID44 OUT-1",
+            "ID44 OUT-2",
+            "AUX A",
+            "AUX C",
+            "SEND",
+            "SEND",
+            "CUE OUT",
+            "ISO A"
+        ],
+        "stripB": [
+            "3630 IN-L",
+            "3630 IN-R",
+            "ID44 IN-1",
+            "ID44 IN-2",
+            "ID44 IN-3",
+            "ID44 IN-4",
+            "ID44 IN-3",
+            "ID44 IN-4",
+            "MS2K IN-L",
+            "MS2K IN-R",
+            "ID44 IN-3",
+            "ID44 IN-4",
+            "VTB IN",
+            "VTB IN-ALT",
+            "AUX IN",
+            "VTB/ID44",
+            "MON L",
+            "MON R",
+            "AUX B",
+            "AUX D",
+            "RET-L",
+            "RET-R",
+            "CUE IN",
+            "ISO B"
+        ]
+    }
+}
