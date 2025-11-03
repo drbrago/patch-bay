@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Erik's Patchbay — Simple Map</title><link rel=stylesheet href=/patchbay.12a18755.css><script type=module src=/patchbay.eca71be2.js></script><body class=bg-body>
+    <main class="container my-4 page">
+      <header class=mb-4>
+        <h1 class="h3 mb-1">Erik’s Patchbay</h1>
+        <div id=meta class="small text-secondary"></div>
+      </header>
+
+      
+      <section class="mb-4 panel">
+        <div class="g-3 row">
+          <div class=col-md>
+            <h2 class="h6 mb-3">Legend</h2>
+            <div id=legend-groups class="d-flex flex-wrap gap-3"></div>
+          </div>
+          <div class=col-md>
+            <h2 class="h6 mb-3">Normalling</h2>
+            <div id=legend-norm class="d-flex flex-wrap gap-2"></div>
+          </div>
+          <div class=col-md>
+            <h2 class="h6 mb-3">Notes</h2>
+            <div id=legend-notes class="small text-secondary"></div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="mb-4 panel">
+        <div class="align-items-center d-flex justify-content-between mb-2">
+          <h2 class="h6 m-0">Front Panel (A top / B bottom)</h2>
+          <span class="small text-secondary">Hover for full name &amp; tip</span>
+        </div>
+
+        <div class="mb-2 small text-secondary">Strip A (outputs)</div>
+        <div id=stripA class=front-strip></div>
+
+        <div class="mb-2 mt-3 small text-secondary">Strip B (inputs)</div>
+        <div id=stripB class=front-strip></div>
+      </section>
+
+      
+      <section class=panel>
+        <div class="align-items-center d-flex justify-content-between mb-3">
+          <h2 class="h6 m-0">Channels</h2>
+          <input id=filter class="filter-input form-control form-control-sm" placeholder="Filter by label, tooltip, group, normalling…" style=max-width:360px>
+        </div>
+        <div class=table-responsive>
+          <table class="align-middle table table-dark table-sm" id=channels-table>
+            <thead>
+              <tr>
+                <th style=width:70px>Ch</th>
+                <th>Group</th>
+                <th>Norm</th>
+                <th>A (short)</th>
+                <th>B (short)</th>
+                <th>Tooltips</th>
+              </tr>
+            </thead>
+            <tbody id=channels-body></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  
+
