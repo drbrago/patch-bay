@@ -1,4 +1,3 @@
-// Use the Bootstrap bundle so Popper (tooltips) is included.
 import "bootstrap/dist/js/bootstrap.bundle";
 
 import data from "../data/patchbay.json";
